@@ -1,3 +1,4 @@
 # Datasets
 
-06/24/2021
+## Network Data
+### email-Eu-core network, source: https://snap.stanford.edu/data/email-Eu-core.html
