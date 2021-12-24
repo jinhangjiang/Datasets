@@ -21,7 +21,7 @@ import os
 
 #change dir
 print(os.getcwd())
-os.chdir('D:/GitHub/Datasets/Text')
+os.chdir('D:/1GitHub/Datasets/Text')
 print(os.getcwd())
 
 #connect to reddit
