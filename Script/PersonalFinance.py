@@ -21,7 +21,11 @@ import os
 
 #change dir
 print(os.getcwd())
+<<<<<<< Updated upstream
 os.chdir('D:/1GitHub/Datasets/Text')
+=======
+os.chdir('E:/Data/PersonalFinance')
+>>>>>>> Stashed changes
 print(os.getcwd())
 
 #connect to reddit
