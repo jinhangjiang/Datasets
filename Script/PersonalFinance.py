@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Nov 26 16:50:16 2021
+Created on Fri Nov 23 16:50:16 2021
 
-@author: jinha
+@author: jinhang
 """
 
 # -*- coding: utf-8 -*-
@@ -21,11 +21,7 @@ import os
 
 #change dir
 print(os.getcwd())
-<<<<<<< Updated upstream
-os.chdir('D:/1GitHub/Datasets/Text')
-=======
 os.chdir('E:/Data/PersonalFinance')
->>>>>>> Stashed changes
 print(os.getcwd())
 
 #connect to reddit
@@ -38,7 +34,7 @@ reddit = praw.Reddit(client_id='OBU5A7M8VyChGw',
 
 #set a starting point of iterations
 num = int(0)
-df = pd.read_csv("PersonalFinance.csv")
+df = pd.read_csv("PersonalFinance_Set2.csv")
 df_len1 = list()
 sub_len1 = list()
 
@@ -75,7 +71,7 @@ while True:
                 a_series = pd.Series(row, index = df.columns)
                 df = df.append(a_series, ignore_index=True)
                 df.sort_values(["Submission_Id", "Date"], ascending = (False, False), inplace=True)
-                df.to_csv("PersonalFinance.csv",index=False)
+                df.to_csv("PersonalFinance_Set2.csv",index=False)
                 
                 #submission's comments
                 for comment in i.comments:
@@ -92,7 +88,7 @@ while True:
                         a_series = pd.Series(row, index = df.columns)
                         df = df.append(a_series, ignore_index=True)
                         df.sort_values(["Submission_Id", "Date"], ascending = (False, False), inplace=True)
-                        df.to_csv("PersonalFinance.csv",index=False)
+                        df.to_csv("PersonalFinance_Set2.csv",index=False)
                         
         
             #old submission with new comments
@@ -112,7 +108,7 @@ while True:
                         a_series = pd.Series(row, index = df.columns)
                         df = df.append(a_series, ignore_index=True)
                         df.sort_values(["Submission_Id", "Date"], ascending = (False, False), inplace=True)
-                        df.to_csv("PersonalFinance.csv",index=False)
+                        df.to_csv("PersonalFinance_Set2.csv",index=False)
                         
         
         #new replies         
@@ -135,7 +131,7 @@ while True:
                     a_series = pd.Series(row, index = df.columns)
                     df = df.append(a_series, ignore_index=True)
                     df.sort_values(["Submission_Id", "Date"], ascending = (False, False), inplace=True)
-                    df.to_csv("PersonalFinance.csv",index=False)
+                    df.to_csv("PersonalFinance_Set2.csv",index=False)
                         
                 
         print("Number of Records in the Data:", len(df))
@@ -157,3 +153,4 @@ while True:
     except:
         print("An Error Occurred Here")
         continue
+    
